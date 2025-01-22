@@ -111,8 +111,13 @@ if feeds and channel_info:
         # Add predictions to the DataFrame
         df['FCR (mg/L)'] = predictions
 
+
+
         # Display the DataFrame
         print(df)
+
+        # Save dataframe
+        df.to_csv('FCR_predictions_latest.csv', index=False)
         
         
         # Calculate FCR using Van Haute's Model
